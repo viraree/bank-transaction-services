@@ -32,3 +32,12 @@ docker commit fsn-rn-mongo registry.gitlab.com/tw8774529/nosql-embed-fullstack
 docker push registry.gitlab.com/tw8774529/fullstack-nosql                    
 
 mongodb+srv://viraree:vir2r3e1980@cluster0.th7somn.mongodb.net/
+
+###############################################################################
+http://localhost:8989/#/login?redirect=%2Fdashboard%2Fservers
+admin
+mariadb
+
+http://localhost:3000/
+
+docker exec -it mdb mariadb --user root -p
