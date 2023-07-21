@@ -1,0 +1,33 @@
+docker run -v /Users/tao.wang/git/roman-num-mongo:/roman-num-mongo --name rn-mongo eclipse/debian_jdk8
+
+docker run -v /Users/tao.wang/git/J8Feat:/J8Feat --name j8feat eclipse/debian_jdk8
+
+
+http://localhost:8079/mongo/hashtable/add/1
+http://localhost:8079/mongo/hashtable
+http://localhost:8079/mongo/hashtable/last
+
+docker commit 2cbb397b5add registry.gitlab.com/viraree/roman-num-mongo
+docker run -v /Users/tao.wang/git/roman-num-mongo:/roman-num-mongo --name rn-mongo eclipse/debian_jdk8
+
+docker run -v /Users/tao.wang/git/fsn-roman-num-mongo:/fsn-roman-num-mongo --name fsn-rn-mongo registry.gitlab.com/viraree/roman-num-mongo
+
+
+docker run -v /Users/tao.wang/git/fullstack-nosql:/fullstack-nosql --name fullstack-nosql registry.gitlab.com/viraree/roman-num-mongo
+
+docker commit 2cbb397b5add registry.gitlab.com/tw8774529/fullstack-nosql
+docker push registry.gitlab.com/tw8774529/fullstack-nosql
+
+docker run -v /Users/tao.wang/git/fullstack-nosql:/fullstack-nosql --name fullstack-nosql eclipse/debian_jdk8
+docker run -v /Users/tao.wang/git/fullstack-nosql:/fullstack-nosql --name fullstack-nosql registry.gitlab.com/tw8774529/fullstack-nosql
+
+mvn clean package -Dmaven.test.skip
+
+java -jar FullstackNoSql-0.0.1-SNAPSHOT.jar
+
+docker commit fsn-rn-mongo registry.gitlab.com/tw8774529/fullstack-nosql
+docker push registry.gitlab.com/tw8774529/fullstack-nosql
+
+
+
+mongodb+srv://viraree:vir2r3e1980@cluster0.th7somn.mongodb.net/
