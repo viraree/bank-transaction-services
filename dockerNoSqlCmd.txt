@@ -1,3 +1,15 @@
+rm -rf .git
+
+git config --global user.name "viraree"
+git config --global user.email "tao.wang@deckers.com"
+
+git init --initial-branch=main
+git remote add origin https://gitlab.com/tw8774529/bank-nosql-api.git
+git add .
+git commit -m "Initial commit"
+git push --set-upstream origin main
+
+##########################
 docker run -v /Users/tao.wang/git/roman-num-mongo:/roman-num-mongo --name rn-mongo eclipse/debian_jdk8
 
 docker run -v /Users/tao.wang/git/J8Feat:/J8Feat --name j8feat eclipse/debian_jdk8
@@ -41,3 +53,8 @@ mariadb
 http://localhost:3000/
 
 docker exec -it mdb mariadb --user root -p
+
+docker commit todo_api registry.gitlab.com/tw8774529/bank-nosql-api
+docker push registry.gitlab.com/tw8774529/bank-nosql-api
+
+docker run -d -p 3030:3030 -v /Users/tao.wang/git/bank-nosql-api:/bank-nosql-api --name bank-nosql-api registry.gitlab.com/tw8774529/bank-nosql-api
