@@ -28,6 +28,7 @@ java -jar FullstackNoSql-0.0.1-SNAPSHOT.jar
 docker commit fsn-rn-mongo registry.gitlab.com/tw8774529/fullstack-nosql
 docker push registry.gitlab.com/tw8774529/fullstack-nosql
 
-
+docker commit fsn-rn-mongo registry.gitlab.com/tw8774529/nosql-embed-fullstack
+docker push registry.gitlab.com/tw8774529/fullstack-nosql                    
 
 mongodb+srv://viraree:vir2r3e1980@cluster0.th7somn.mongodb.net/
