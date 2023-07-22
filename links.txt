@@ -2,3 +2,8 @@ https://challenges.synpulse8.com/backend-engineer/
 
 https://mariadb.com/ja/resources/blog/how-to-manage-nosql-data-with-mariadb/
 https://mariadb.com/resources/blog/getting-started-with-the-mariadb-maxscale-gui/
+
+https://app.freecurrencyapi.com/request-playground
+
+https://app.swaggerhub.com/apis/VIRAREE_1/bank-data-transaction/1.0.0
+
