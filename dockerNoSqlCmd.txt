@@ -58,3 +58,6 @@ docker commit todo_api registry.gitlab.com/tw8774529/bank-nosql-api
 docker push registry.gitlab.com/tw8774529/bank-nosql-api
 
 docker run -d -p 3030:3030 -v /Users/tao.wang/git/bank-nosql-api:/bank-nosql-api --name bank-nosql-api registry.gitlab.com/tw8774529/bank-nosql-api
+
+docker commit bank-nosql-api registry.gitlab.com/tw8774529/bank-nosql-api
+docker push registry.gitlab.com/tw8774529/bank-nosql-api    
