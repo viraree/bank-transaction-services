@@ -61,3 +61,6 @@ docker run -d -p 3030:3030 -v /Users/tao.wang/git/bank-nosql-api:/bank-nosql-api
 
 docker commit bank-nosql-api registry.gitlab.com/tw8774529/bank-nosql-api
 docker push registry.gitlab.com/tw8774529/bank-nosql-api    
+
+###############################################################################
+docker run -it -v /Users/tao.wang/git/bank-admin-client:/bank-admin-client --name bank-admin-client bitnami/python
