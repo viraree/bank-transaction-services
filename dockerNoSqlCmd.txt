@@ -63,4 +63,7 @@ docker commit bank-nosql-api registry.gitlab.com/tw8774529/bank-nosql-api
 docker push registry.gitlab.com/tw8774529/bank-nosql-api    
 
 ###############################################################################
-docker run -it -v /Users/tao.wang/git/bank-admin-client:/bank-admin-client --name bank-admin-client bitnami/python
+/usr/bin/python3 -m pip install numpy 
+/usr/bin/python3 -m pip install -r requirements.txt
+/usr/bin/python3 
+docker run -d -p 3050:8000 -v /Users/tao.wang/git/bank-admin-client:/bank-admin-client --name bank-admin-client bitnami/python:3.9-debian-11
