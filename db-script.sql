@@ -1,16 +1,52 @@
 CREATE DATABASE bank_nosql;
 
 USE bank_nosql;
+CREATE TABLE transactions (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ doc LONGTEXT NOT NULL
+);
 
-CREATE TABLE `transactions` (
-    `id` varchar(35) GENERATED ALWAYS AS                 
-               (json_compact(json_extract(`trans_details`,'$._id'))) VIRTUAL,
-                `trans_details` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT 
-               NULL CHECK (json_valid(`trans_details`)),
-             UNIQUE KEY `id` (`id`),
-            CONSTRAINT `id_not_null` CHECK (`id` is not null)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+use bank_nosql;
+INSERT INTO transactions (doc)
+VALUES ('[]');
+INSERT INTO transactions (doc)
+VALUES ('[{}]');
 
+INSERT INTO transactions (doc)
+VALUES ("[{'currency_amount': 'CHF 0',
+ 'description': 'TEST TEST TEST',
+ 'eur_amount': 0,
+ 'id': 1111111111,
+ 'month_num': 1,
+ 'user_uid': 'P-0123456789' }]");
+
+INSERT INTO transactions (doc)
+VALUES ("[{'currency_amount': 'CHF 75',
+ 'description': 'Online payment CHF',
+ 'eur_amount': 77.78,
+ 'id': 0,
+ 'month_num': 10,
+ 'user_uid': 'P-0123456789' }]");
+
+INSERT INTO transactions (doc)
+VALUES ("[{'currency_amount': 'CHF 75',
+ 'description': 'Online payment CHF',
+ 'eur_amount': 77.78,
+ 'id': 0,
+ 'month_num': 7,
+ 'user_uid': 'P-0123456789' }]");
+
+INSERT INTO transactions (doc)
+VALUES ("[{'currency_amount': 'CHF 75',
+ 'description': 'Online payment CHF',
+ 'eur_amount': 77.78,
+ 'id': 0,
+ 'month_num': 11,
+ 'user_uid': 'P-0123456789' }]");
+#######################################
+use bank_nosql;
+DELETE FROM transactions
+WHERE id=3;
 #######################################
 [{'currency_amount': 'CHF 75',
  'description': 'Online payment CHF',
