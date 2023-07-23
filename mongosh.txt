@@ -1,0 +1,6 @@
+
+db.createCollection("transactions")
+show collections
+db.transactions.insertOne({'currency_amount': 'CHF 0'})
+db.transactions.insertOne({'currency_amount': 'CHF 1'})
+db.transactions.find()
