@@ -1,0 +1,20 @@
+docker pull mongo
+
+
+docker tag registry.gitlab.com/tw8774529/nosqldev mongo 
+docker run -d -p 7017:27017 --name mongodb mongo 
+docker exec -it mongodb mongosh
+
+db.runCommand(
+   {
+      hello: 1
+   }
+)
+
+docker logs mongodb
+
+docker commit mongodb mongo
+docker tag mongo registry.gitlab.com/tw8774529/nosqldev
+docker push registry.gitlab.com/tw8774529/nosqldev
+
+https://phoenixnap.com/kb/docker-mongodb
