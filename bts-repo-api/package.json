@@ -1,5 +1,5 @@
 {
-  "name": "bts_repo_api",
+  "name": "bts-repo-api",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -12,6 +12,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongodb": "^4.1.0"
+    "mongodb": "^4.1.0",
+    "mongoose": "^7.4.0"
   }
 }

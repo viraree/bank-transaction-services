@@ -1,7 +1,10 @@
-FROM hub.c.163.com/library/node
+#FROM hub.c.163.com/library/node
+#FROM bts-repo-api
+#FROM registry.gitlab.com/tw8774529/bank-nosql-api
+FROM node:12
 
 # Create app directory
-WORKDIR /bts_repo_api
+WORKDIR /bts-repo-api
 
 # Install app dependencies
 COPY package*.json ./

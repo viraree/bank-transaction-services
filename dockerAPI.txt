@@ -24,5 +24,10 @@ https://phoenixnap.com/kb/docker-mongodb
 ##################################################
 bts_repo_api
 ------------------------------------------------------------------------
-docker build -t bts_repo_api .
-docker run -d -p 2030:3030 --name bts_repo_api bts_repo_api
+cd bts-repo-api
+docker build -t bts-repo-api .
+docker run -v /Users/tao.wang/git/bank-transaction-services/bts-repo-api:/bts-repo-api -d -p 2030:3030 --name bts-repo-api bts-repo-api
+docker rm bts-repo-api -f
+
+
+docker-compose up
