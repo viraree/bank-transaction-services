@@ -1,3 +1,5 @@
+bts_repo
+------------------------------------------------------------------
 docker pull mongo
 
 
@@ -18,3 +20,9 @@ docker tag mongo registry.gitlab.com/tw8774529/nosqldev
 docker push registry.gitlab.com/tw8774529/nosqldev
 
 https://phoenixnap.com/kb/docker-mongodb
+
+##################################################
+bts_repo_api
+------------------------------------------------------------------------
+docker build -t bts_repo_api .
+docker run -d -p 2030:3030 --name bts_repo_api bts_repo_api

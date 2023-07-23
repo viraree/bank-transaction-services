@@ -1,0 +1,17 @@
+version: "3"
+services:
+  repo:
+    image: mongo
+    hostname: 'bts_mongo'
+    container_name: 'bts_mongo'
+    ports:
+      - 2017:27017
+  repo-api:
+    build: ./bts_repo_api
+    hostname: 'bts_repo_api'
+    container_name: 'bts_repo_api'
+    links:
+      - "repo"
+    ports:
+      - 2030:3030
+  
