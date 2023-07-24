@@ -10,3 +10,8 @@ https://app.freecurrencyapi.com/request-playground
 
 https://app.swaggerhub.com/apis/VIRAREE_1/bank-data-transaction/1.0.0
 
+
+
+Bank MQ
+http://114.96.93.23:8084/
+http://114.96.93.23:15672  (RabbitMQ)
