@@ -69,3 +69,5 @@ docker push registry.gitlab.com/tw8774529/bank-nosql-api
 /usr/bin/python3 -m pip install -r requirements.txt
 /usr/bin/python3 admin-app.py
 docker run -d -p 3050:8000 -v /Users/tao.wang/git/bank-admin-client:/bank-admin-client --name bank-admin-client bitnami/python:3.9-debian-11
+
+docker exec -it bts-mongo mongosh
