@@ -41,13 +41,13 @@ public class User   {
   {
     id = null;
 
-    uid = null;
+    uid = "P-0123456789";
 
-    fullName = null;
+    fullName = "Peter Russells";
 
-    homeAddress = null;
+    homeAddress = "123 Sunset Avenue";
 
-    phone = null;
+    phone = "408-867-5309";
   }
 
 

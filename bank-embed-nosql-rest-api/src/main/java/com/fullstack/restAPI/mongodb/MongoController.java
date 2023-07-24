@@ -99,13 +99,10 @@ public class MongoController {
 		ResponseMessage result=new ResponseMessage();
 
 		try {
-			/*DataModel dataModel = new DataModel();
-			dataModel.initLookup();
-			dataModel.setId(System.currentTimeMillis());*/
 
 			User user=new User();
-			//user.
-
+			user.initData();
+			user.setId(System.currentTimeMillis());
 			mongoTemplate.save(user);
 		}
 		catch(Exception e)
@@ -146,4 +143,14 @@ public class MongoController {
 		return last;
 	}
 
+	@RequestMapping(value = "/user/last", method = RequestMethod.GET)
+	public User fetchLastUser() {
+
+		User last= mongoTemplate.
+				findAll(User.class)
+				.stream()
+				.reduce((first, second) -> second)
+				.orElse(null);
+		return last;
+	}
 }
