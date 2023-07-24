@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fullstack.restAPI.bankdata.*;
 @RestController
-@RequestMapping("/mongo")
+@RequestMapping("/api")
 public class MongoController {
 
 	@Autowired
@@ -82,8 +83,30 @@ public class MongoController {
 			DataModel dataModel = new DataModel();
 			dataModel.initLookup();
 			dataModel.setId(System.currentTimeMillis());
-
 			mongoTemplate.save(dataModel);
+		}
+		catch(Exception e)
+		{
+			result.setMessage("error");
+			result.setErrorReason(e.getMessage());
+		}
+		return ResponseEntity.ok(result);
+	}
+
+
+	@RequestMapping(value = "/user/add", method = RequestMethod.GET)
+	public ResponseEntity<ResponseMessage> addUser() {
+		ResponseMessage result=new ResponseMessage();
+
+		try {
+			/*DataModel dataModel = new DataModel();
+			dataModel.initLookup();
+			dataModel.setId(System.currentTimeMillis());*/
+
+			User user=new User();
+			//user.
+
+			mongoTemplate.save(user);
 		}
 		catch(Exception e)
 		{
