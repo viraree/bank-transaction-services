@@ -1,0 +1,9 @@
+/Users/tao.wang/try/spring-boot-exchanges/src/main/java/com/javainuse/config/RabbitMQFanoutConfig.java
+/Users/tao.wang/try/spring-boot-exchanges/src/main/java/com/javainuse/config/RabbitMQHeaderConfig.java
+/Users/tao.wang/try/spring-boot-exchanges/src/main/java/com/javainuse/controller/RabbitMQTopicWebController.java
+/Users/tao.wang/try/spring-boot-exchanges/src/main/java/com/javainuse/controller/RabbitMQDirectWebController.java
+/Users/tao.wang/try/spring-boot-exchanges/src/main/java/com/javainuse/controller/RabbitMQFanoutWebController.java
+/Users/tao.wang/try/spring-boot-exchanges/src/main/java/com/javainuse/controller/RabbitMQHeaderWebController.java
+/Users/tao.wang/try/spring-boot-exchanges/src/main/java/com/javainuse/config/RabbitMQDirectConfig.java
+/Users/tao.wang/try/spring-boot-exchanges/src/main/java/com/javainuse/SpringBootRabbitMQApplication.java
+/Users/tao.wang/try/spring-boot-exchanges/src/main/java/com/javainuse/config/RabbitMQTopicConfig.java
