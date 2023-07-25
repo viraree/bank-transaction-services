@@ -61,3 +61,5 @@ WHERE id=3;
           'uid': 'P-0123456789'},
  'user_uid': 'P-0123456789',
  'value_date': datetime.datetime(2015, 7, 20, 15, 49, 4, tzinfo=tzoffset(None, -25200))}]
+
+ #########
