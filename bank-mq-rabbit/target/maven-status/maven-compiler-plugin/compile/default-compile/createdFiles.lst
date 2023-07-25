@@ -1,6 +1,7 @@
+com/javainuse/controller/RabbitMQDirectWebController.class
 com/javainuse/controller/RabbitMQHeaderWebController.class
 com/javainuse/controller/RabbitMQFanoutWebController.class
-com/javainuse/controller/RabbitMQDirectWebController.class
+com/javainuse/config/RabbitMQDirectConfig.class
 com/javainuse/SpringBootRabbitMQApplication.class
 com/javainuse/config/RabbitMQHeaderConfig.class
 com/javainuse/controller/RabbitMQTopicWebController.class

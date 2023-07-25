@@ -1,4 +1,4 @@
-/*package com.javainuse.config;
+package com.javainuse.config;
 
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.core.Binding;
@@ -70,4 +70,3 @@ public class RabbitMQDirectConfig {
 		return rabbitTemplate;
 	}
 }
-*/
